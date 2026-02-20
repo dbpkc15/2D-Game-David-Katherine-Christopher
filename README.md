@@ -1,3 +1,4 @@
 # 2D-Game-David-Katherine-Christopher
-My 2D game for IVGD
-This will be a fun game!
+My 2D game for IVGD!
+This will be a fun game that will be fireeee
+LFGGG
