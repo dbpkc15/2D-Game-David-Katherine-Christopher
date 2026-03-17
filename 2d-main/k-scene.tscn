@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://pqndtr4jiwlj"]
+
+[ext_resource type="Texture2D" uid="uid://ce3tcyojf2p26" path="res://rock_clean.png" id="1_moe5q"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(751, 460)
+texture = ExtResource("1_moe5q")
