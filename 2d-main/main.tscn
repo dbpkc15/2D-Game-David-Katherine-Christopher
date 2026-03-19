@@ -1,13 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfkyj2gbjsoc7"]
+[gd_scene format=3 uid="uid://cfkyj2gbjsoc7"]
 
 [ext_resource type="Texture2D" uid="uid://diwq0iawytod4" path="res://icon.svg" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://pqndtr4jiwlj" path="res://k-scene.tscn" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://b041jnytovu40" path="res://Ram 2.png" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://drd318r77p7xs" path="res://ram_2.gd" id="3_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://ce3tcyojf2p26" path="res://Pictures/rock_clean.png" id="4_7mycd"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=755055023]
 
-[node name="Icon" type="Sprite2D" parent="."]
+[node name="Icon" type="Sprite2D" parent="." unique_id=1414931463]
 position = Vector2(940, 150)
 texture = ExtResource("1_ig7tw")
 
-[node name="Node2D" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(-478, -253)
+[node name="Ram2" type="Sprite2D" parent="." unique_id=269947940]
+position = Vector2(378.99994, 479.99997)
+scale = Vector2(0.2172222, 0.25946966)
+texture = ExtResource("2_1bvp3")
+script = ExtResource("3_1bvp3")
+speed = 10
+
+[node name="RockClean" type="Sprite2D" parent="." unique_id=444636262]
+position = Vector2(223.25, 139.5)
+scale = Vector2(0.8238095, 0.89375)
+texture = ExtResource("4_7mycd")
+
+[node name="RockClean2" type="Sprite2D" parent="RockClean" unique_id=991384536]
+position = Vector2(687.96246, 337.34265)
+scale = Vector2(0.74761903, 0.775)
+texture = ExtResource("4_7mycd")

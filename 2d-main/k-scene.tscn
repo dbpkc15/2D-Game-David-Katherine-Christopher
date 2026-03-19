@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://pqndtr4jiwlj"]
+[gd_scene format=3 uid="uid://pqndtr4jiwlj"]
 
-[ext_resource type="Texture2D" uid="uid://ce3tcyojf2p26" path="res://rock_clean.png" id="1_moe5q"]
+[ext_resource type="Texture2D" uid="uid://ce3tcyojf2p26" path="res://Pictures/rock_clean.png" id="1_moe5q"]
 
 [node name="Node2D" type="Node2D"]
 
