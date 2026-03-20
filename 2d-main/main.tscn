@@ -13,14 +13,14 @@ load_path = "res://.godot/imported/Mountain_Ground_Decorative_Transparent_Image.
 
 [node name="Ram2" type="Sprite2D" parent="." unique_id=269947940]
 z_index = 1
-position = Vector2(316.62497, 444.25)
-scale = Vector2(0.07861115, 0.12026519)
+position = Vector2(336.12497, 454.24997)
+scale = Vector2(0.1219445, 0.15814391)
 texture = SubResource("CompressedTexture2D_h2yge")
 script = ExtResource("3_1bvp3")
 speed = 10
 
 [node name="Camera2D" type="Camera2D" parent="Ram2" unique_id=93452543]
-position = Vector2(-198.76257, 81.070915)
+position = Vector2(-83.02929, 118.563156)
 scale = Vector2(7.4534144, 5.7704906)
 
 [node name="RockClean" type="Sprite2D" parent="." unique_id=444636262]
