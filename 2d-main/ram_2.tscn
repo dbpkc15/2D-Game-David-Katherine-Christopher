@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ms7eev1e53rc"]
+
+[ext_resource type="Script" uid="uid://drd318r77p7xs" path="res://ram_2.gd" id="1_h07f4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h2yge"]
+load_path = "res://.godot/imported/Ram 2.png-bac6c7fc79bba9a5f6c66b9fd4fe0748.ctex"
+
+[node name="Ram2" type="Sprite2D"]
+z_index = 1
+scale = Vector2(0.1219445, 0.15814391)
+texture = SubResource("CompressedTexture2D_h2yge")
+script = ExtResource("1_h07f4")
+speed = 10
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1425.854, -191.28119)
+scale = Vector2(7.4534144, 5.7704906)
