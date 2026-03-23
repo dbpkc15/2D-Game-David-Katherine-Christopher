@@ -1,0 +1,72 @@
+[gd_scene load_steps=7 format=3 uid="uid://n0ww7dlekgvk"]
+
+[ext_resource type="Texture2D" uid="uid://dao08abqxkbj7" path="res://Pictures/87cefa.png" id="1_eq6nc"]
+[ext_resource type="Texture2D" uid="uid://dawb6t54m6t5a" path="res://Pictures/clouds.png" id="2_bpugw"]
+[ext_resource type="Texture2D" uid="uid://dm1vm2hj3etyr" path="res://Pictures/clouds2.png" id="2_gjjrj"]
+[ext_resource type="Texture2D" uid="uid://ce8yusmdadj6p" path="res://Pictures/mountains.png" id="3_gjjrj"]
+[ext_resource type="Texture2D" uid="uid://buph1sk2qlt1b" path="res://Pictures/hills.png" id="4_vvxqx"]
+[ext_resource type="Texture2D" uid="uid://bumnx2cxycamy" path="res://Pictures/backgroud2.png" id="5_cdpnt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Parallax2Dsky" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.05, 0.05)
+repeat_size = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dsky"]
+position = Vector2(575.5, 322)
+scale = Vector2(0.30026042, 0.29999998)
+texture = ExtResource("1_eq6nc")
+
+[node name="Parallax2Dclouds2" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-10, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds2"]
+scale = Vector2(1.8790851, 1.1708543)
+texture = ExtResource("2_gjjrj")
+centered = false
+
+[node name="Parallax2Dclouds" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-20, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds"]
+position = Vector2(554.00006, 156.49998)
+scale = Vector2(1.6189189, 1.1241133)
+texture = ExtResource("2_bpugw")
+
+[node name="Parallax2Dmountains" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1100, 0)
+autoscroll = Vector2(-50, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dmountains"]
+position = Vector2(-2, -62)
+scale = Vector2(1.1540002, 1.3176944)
+texture = ExtResource("3_gjjrj")
+centered = false
+
+[node name="Parallax2Dhills" type="Parallax2D" parent="ParallaxBackground"]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(1050, 0)
+autoscroll = Vector2(-70, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dhills"]
+position = Vector2(-136, -65)
+scale = Vector2(2.13738, 1.7002397)
+texture = ExtResource("4_vvxqx")
+centered = false
+
+[node name="Parallax2Dgrass" type="Parallax2D" parent="ParallaxBackground"]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-110, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dgrass"]
+position = Vector2(576.00006, 323.49997)
+scale = Vector2(1.8823528, 1.782369)
+texture = ExtResource("5_cdpnt")

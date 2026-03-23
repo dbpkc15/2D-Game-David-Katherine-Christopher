@@ -12,8 +12,4 @@ func _process(delta: float) -> void:
 		position.x += speed
 	if Input.is_action_pressed("Move_Left"):
 		position.x -= speed
-	if Input.is_action_pressed("Move_Up"):
-		position.y -= speed
-	if Input.is_action_pressed("Move_Down"):
-		position.y += speed
 	
