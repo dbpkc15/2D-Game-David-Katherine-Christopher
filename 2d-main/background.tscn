@@ -14,6 +14,7 @@
 [node name="Parallax2Dsky" type="Parallax2D" parent="ParallaxBackground"]
 scroll_scale = Vector2(0.05, 0.05)
 repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(1100, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dsky"]
 position = Vector2(575.5, 322)
