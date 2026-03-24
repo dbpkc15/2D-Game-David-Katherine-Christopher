@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://cgoxcrm6ug2f2"]
 
-[node name="Node2D" type="Node2D" unique_id=681819130]
+[ext_resource type="Texture2D" uid="uid://carbusokq2f1g" path="res://Pictures/png-clipart-four-leaf-clover-euclidean-icon-golden-coins-clover-golden-frame-food-removebg-preview.png" id="1_dllhp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_008ck"]
+radius = 52.153618
+
+[node name="Lucky Coin" type="Area2D" unique_id=629207465]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1752621608]
+position = Vector2(52, 70)
+shape = SubResource("CircleShape2D_008ck")
+
+[node name="PngClipartFourLeafCloverEuclideanIconGoldenCoinsCloverGoldenFrameFoodRemovebgPreview" type="Sprite2D" parent="." unique_id=2124210298]
+position = Vector2(52.359375, 69.55469)
+scale = Vector2(0.20619106, 0.20995885)
+texture = ExtResource("1_dllhp")

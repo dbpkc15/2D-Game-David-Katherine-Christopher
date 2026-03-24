@@ -12,15 +12,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_pressed("Move_Right"):
-		position.x += speed
-		score += 1
-	if Input.is_action_pressed("Move_Left"):
-		position.x -= speed
-	if Input.is_action_pressed("Move_Up"):
-		position.y -= speed
-	if Input.is_action_pressed("Move_Down"):
-		position.y += speed
+	#if Input.is_action_pressed("Move_Right"):
+		#position.x += speed
+		#score += 1
+	#if Input.is_action_pressed("Move_Left"):
+		#position.x -= speed
+	#if Input.is_action_pressed("Move_Up"):
+		#var tween = get_tree().create_tween()
+		#tween.tween_property(self, "position", Vector2(position.x, 385), 1.0)
+		#tween.tween_property(self, "position", Vector2(position.x, 536), 1.0)
+
 	
 	var score_label = get_node("Score")
 	score_label.text = str(score)
@@ -29,5 +30,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	area.queue_free()
 	score += 1
 	$Score.text = str(score)
