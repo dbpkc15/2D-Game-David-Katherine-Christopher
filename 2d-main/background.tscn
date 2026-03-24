@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://n0ww7dlekgvk"]
+[gd_scene format=3 uid="uid://n0ww7dlekgvk"]
 
 [ext_resource type="Texture2D" uid="uid://dao08abqxkbj7" path="res://Pictures/87cefa.png" id="1_eq6nc"]
 [ext_resource type="Texture2D" uid="uid://dawb6t54m6t5a" path="res://Pictures/clouds.png" id="2_bpugw"]
@@ -6,68 +6,108 @@
 [ext_resource type="Texture2D" uid="uid://ce8yusmdadj6p" path="res://Pictures/mountains.png" id="3_gjjrj"]
 [ext_resource type="Texture2D" uid="uid://buph1sk2qlt1b" path="res://Pictures/hills.png" id="4_vvxqx"]
 [ext_resource type="Texture2D" uid="uid://bumnx2cxycamy" path="res://Pictures/backgroud2.png" id="5_cdpnt"]
+[ext_resource type="Texture2D" uid="uid://hj2wxjm5ak1c" path="res://Pictures/Ram.png" id="7_gjjrj"]
+[ext_resource type="Script" uid="uid://brypfrwodq1kf" path="res://ram.gd" id="8_vvxqx"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="FontVariation" id="FontVariation_vvxqx"]
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[sub_resource type="LabelSettings" id="LabelSettings_cdpnt"]
+font = SubResource("FontVariation_vvxqx")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+shadow_size = 5
 
-[node name="Parallax2Dsky" type="Parallax2D" parent="ParallaxBackground"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvxqx"]
+
+[node name="Node2D" type="Node2D" unique_id=199740449]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1063528176]
+
+[node name="Parallax2Dsky" type="Parallax2D" parent="ParallaxBackground" unique_id=2141663736]
 scroll_scale = Vector2(0.05, 0.05)
 repeat_size = Vector2(1152, 0)
 autoscroll = Vector2(1100, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dsky"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dsky" unique_id=2045800281]
 position = Vector2(575.5, 322)
 scale = Vector2(0.30026042, 0.29999998)
 texture = ExtResource("1_eq6nc")
 
-[node name="Parallax2Dclouds2" type="Parallax2D" parent="ParallaxBackground"]
+[node name="Parallax2Dclouds2" type="Parallax2D" parent="ParallaxBackground" unique_id=664419706]
 scroll_scale = Vector2(0.1, 0.1)
 repeat_size = Vector2(1152, 0)
 autoscroll = Vector2(-10, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds2"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds2" unique_id=234481234]
 scale = Vector2(1.8790851, 1.1708543)
 texture = ExtResource("2_gjjrj")
 centered = false
 
-[node name="Parallax2Dclouds" type="Parallax2D" parent="ParallaxBackground"]
+[node name="Parallax2Dclouds" type="Parallax2D" parent="ParallaxBackground" unique_id=73313008]
 scroll_scale = Vector2(0.2, 0.2)
 repeat_size = Vector2(1152, 0)
 autoscroll = Vector2(-20, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds" unique_id=1261367736]
 position = Vector2(554.00006, 156.49998)
 scale = Vector2(1.6189189, 1.1241133)
 texture = ExtResource("2_bpugw")
 
-[node name="Parallax2Dmountains" type="Parallax2D" parent="ParallaxBackground"]
+[node name="Parallax2Dmountains" type="Parallax2D" parent="ParallaxBackground" unique_id=1580152200]
 scroll_scale = Vector2(0.5, 0.5)
 repeat_size = Vector2(1100, 0)
 autoscroll = Vector2(-50, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dmountains"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dmountains" unique_id=304617844]
 position = Vector2(-2, -62)
 scale = Vector2(1.1540002, 1.3176944)
 texture = ExtResource("3_gjjrj")
 centered = false
 
-[node name="Parallax2Dhills" type="Parallax2D" parent="ParallaxBackground"]
+[node name="Parallax2Dhills" type="Parallax2D" parent="ParallaxBackground" unique_id=1260445841]
 scroll_scale = Vector2(0.6, 0.6)
 repeat_size = Vector2(1050, 0)
 autoscroll = Vector2(-70, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dhills"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dhills" unique_id=178493382]
 position = Vector2(-136, -65)
 scale = Vector2(2.13738, 1.7002397)
 texture = ExtResource("4_vvxqx")
 centered = false
 
-[node name="Parallax2Dgrass" type="Parallax2D" parent="ParallaxBackground"]
+[node name="Parallax2Dgrass" type="Parallax2D" parent="ParallaxBackground" unique_id=276311214]
 repeat_size = Vector2(1152, 0)
 autoscroll = Vector2(-110, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dgrass"]
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dgrass" unique_id=1951399006]
 position = Vector2(576.00006, 323.49997)
 scale = Vector2(1.8823528, 1.782369)
 texture = ExtResource("5_cdpnt")
+
+[node name="Ram" type="Sprite2D" parent="." unique_id=1045907886]
+position = Vector2(169, 536)
+scale = Vector2(0.20243351, 0.1947464)
+texture = ExtResource("7_gjjrj")
+script = ExtResource("8_vvxqx")
+speed = 5
+
+[node name="Score" type="Label" parent="Ram" unique_id=807868691]
+top_level = true
+anchors_preset = -1
+anchor_top = -3.3650002
+anchor_right = 1.8210001
+anchor_bottom = -2.904
+offset_left = 35.0
+offset_top = 2200.5203
+offset_right = -1927.792
+offset_bottom = 1992.792
+text = "0"
+label_settings = SubResource("LabelSettings_cdpnt")
+
+[node name="Area2D" type="Area2D" parent="Ram" unique_id=373721476]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ram/Area2D" unique_id=894707567]
+shape = SubResource("CircleShape2D_vvxqx")
+
+[connection signal="area_entered" from="Ram/Area2D" to="Ram" method="_on_area_2d_area_entered"]
