@@ -1,0 +1,163 @@
+[gd_scene format=3 uid="uid://n0ww7dlekgvk"]
+
+[ext_resource type="Texture2D" uid="uid://dao08abqxkbj7" path="res://Pictures/87cefa.png" id="1_eq6nc"]
+[ext_resource type="Script" uid="uid://c6gkiy8yvteei" path="res://main_scene.gd" id="1_p5x2j"]
+[ext_resource type="Texture2D" uid="uid://dawb6t54m6t5a" path="res://Pictures/clouds.png" id="2_bpugw"]
+[ext_resource type="Texture2D" uid="uid://dm1vm2hj3etyr" path="res://Pictures/clouds2.png" id="2_gjjrj"]
+[ext_resource type="Texture2D" uid="uid://ce8yusmdadj6p" path="res://Pictures/mountains.png" id="3_gjjrj"]
+[ext_resource type="Texture2D" uid="uid://buph1sk2qlt1b" path="res://Pictures/hills.png" id="4_vvxqx"]
+[ext_resource type="Texture2D" uid="uid://bumnx2cxycamy" path="res://Pictures/backgroud2.png" id="5_cdpnt"]
+[ext_resource type="Texture2D" uid="uid://hj2wxjm5ak1c" path="res://Pictures/Ram.png" id="7_gjjrj"]
+[ext_resource type="PackedScene" uid="uid://cgoxcrm6ug2f2" path="res://Edits.tscn" id="9_cdpnt"]
+[ext_resource type="Texture2D" uid="uid://ce3tcyojf2p26" path="res://Pictures/rock_clean.png" id="10_8u6ia"]
+[ext_resource type="Script" uid="uid://b0gj57r2oj54x" path="res://sprite_ram.gd" id="11_p5x2j"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8u6ia"]
+radius = 88.358215
+height = 176.71643
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8u6ia"]
+distance = 127.0
+
+[sub_resource type="FontVariation" id="FontVariation_vvxqx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cdpnt"]
+font = SubResource("FontVariation_vvxqx")
+font_size = 60
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+shadow_size = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vvxqx"]
+radius = 324.69
+
+[node name="Node2D" type="Node2D" unique_id=199740449]
+script = ExtResource("1_p5x2j")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1063528176]
+
+[node name="Parallax2Dsky" type="Parallax2D" parent="ParallaxBackground" unique_id=2141663736]
+scroll_scale = Vector2(0.05, 0.05)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(1100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dsky" unique_id=2045800281]
+position = Vector2(575.5, 322)
+scale = Vector2(0.30026042, 0.29999998)
+texture = ExtResource("1_eq6nc")
+
+[node name="Parallax2Dclouds2" type="Parallax2D" parent="ParallaxBackground" unique_id=664419706]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-10, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds2" unique_id=234481234]
+scale = Vector2(1.8790851, 1.1708543)
+texture = ExtResource("2_gjjrj")
+centered = false
+
+[node name="Parallax2Dclouds" type="Parallax2D" parent="ParallaxBackground" unique_id=73313008]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-20, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dclouds" unique_id=1261367736]
+position = Vector2(554.00006, 156.49998)
+scale = Vector2(1.6189189, 1.1241133)
+texture = ExtResource("2_bpugw")
+
+[node name="Parallax2Dmountains" type="Parallax2D" parent="ParallaxBackground" unique_id=1580152200]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(1100, 0)
+autoscroll = Vector2(-50, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dmountains" unique_id=304617844]
+position = Vector2(-2, -62)
+scale = Vector2(1.1540002, 1.3176944)
+texture = ExtResource("3_gjjrj")
+centered = false
+
+[node name="Parallax2Dhills" type="Parallax2D" parent="ParallaxBackground" unique_id=1260445841]
+scroll_scale = Vector2(0.6, 0.6)
+repeat_size = Vector2(1050, 0)
+autoscroll = Vector2(-70, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dhills" unique_id=178493382]
+position = Vector2(-136, -65)
+scale = Vector2(2.13738, 1.7002397)
+texture = ExtResource("4_vvxqx")
+centered = false
+
+[node name="Parallax2Dgrass" type="Parallax2D" parent="ParallaxBackground" unique_id=276311214]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(-110, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Parallax2Dgrass" unique_id=1951399006]
+position = Vector2(576.00006, 323.49997)
+scale = Vector2(1.8823528, 1.782369)
+texture = ExtResource("5_cdpnt")
+
+[node name="Lucky Coins" type="Node2D" parent="." unique_id=196282554]
+position = Vector2(894.99994, 442.99997)
+scale = Vector2(0.32565215, 0.264978)
+
+[node name="Lucky Coin" parent="Lucky Coins" unique_id=629207465 instance=ExtResource("9_cdpnt")]
+position = Vector2(-420.69403, 184.92108)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="Lucky Coin2" parent="Lucky Coins" unique_id=518889465 instance=ExtResource("9_cdpnt")]
+position = Vector2(359.27908, 98.12135)
+scale = Vector2(1.0000001, 1.0000002)
+
+[node name="Rock" type="AnimatableBody2D" parent="." unique_id=925847354]
+position = Vector2(432.0001, 511)
+scale = Vector2(0.3873015, 0.83750015)
+
+[node name="RockClean" type="Sprite2D" parent="Rock" unique_id=1692620606]
+position = Vector2(-23.237913, 20.298502)
+scale = Vector2(0.8032788, 0.99999994)
+texture = ExtResource("10_8u6ia")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rock" unique_id=1164359295]
+position = Vector2(-20.65599, 26.268644)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("CapsuleShape2D_8u6ia")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=373826830]
+position = Vector2(12, 714)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=19095719]
+shape = SubResource("WorldBoundaryShape2D_8u6ia")
+
+[node name="Ram" type="CharacterBody2D" parent="." unique_id=971438440]
+position = Vector2(169, 536)
+scale = Vector2(0.20243351, 0.1947464)
+
+[node name="Sprite Ram" type="Sprite2D" parent="Ram" unique_id=1045907886]
+texture = ExtResource("7_gjjrj")
+script = ExtResource("11_p5x2j")
+
+[node name="Score" type="Label" parent="Ram/Sprite Ram" unique_id=807868691]
+top_level = true
+anchors_preset = -1
+anchor_top = -3.3650002
+anchor_right = 1.8210001
+anchor_bottom = -2.904
+offset_left = 35.0
+offset_top = 2200.5203
+offset_right = -1927.792
+offset_bottom = 1992.792
+text = "0"
+label_settings = SubResource("LabelSettings_cdpnt")
+
+[node name="Area2D" type="Area2D" parent="Ram/Sprite Ram" unique_id=373721476]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ram/Sprite Ram/Area2D" unique_id=894707567]
+position = Vector2(4.9398937, -30.809298)
+shape = SubResource("CircleShape2D_vvxqx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ram" unique_id=1531129395]
+position = Vector2(4.9398937, -30.809298)
+shape = SubResource("CircleShape2D_vvxqx")
+
+[connection signal="area_entered" from="Ram/Sprite Ram/Area2D" to="Ram/Sprite Ram" method="_on_area_2d_area_entered"]
