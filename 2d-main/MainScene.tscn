@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://n0ww7dlekgvk"]
 
 [ext_resource type="Texture2D" uid="uid://dao08abqxkbj7" path="res://Pictures/87cefa.png" id="1_eq6nc"]
-[ext_resource type="Script" uid="uid://c6gkiy8yvteei" path="res://main_scene.gd" id="1_p5x2j"]
 [ext_resource type="Texture2D" uid="uid://dawb6t54m6t5a" path="res://Pictures/clouds.png" id="2_bpugw"]
 [ext_resource type="Texture2D" uid="uid://dm1vm2hj3etyr" path="res://Pictures/clouds2.png" id="2_gjjrj"]
 [ext_resource type="Texture2D" uid="uid://ce8yusmdadj6p" path="res://Pictures/mountains.png" id="3_gjjrj"]
@@ -32,7 +31,6 @@ shadow_size = 5
 radius = 324.69
 
 [node name="Node2D" type="Node2D" unique_id=199740449]
-script = ExtResource("1_p5x2j")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1063528176]
 
