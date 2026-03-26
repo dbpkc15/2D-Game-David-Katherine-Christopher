@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://hlgd6804x3ck"]
+
+[ext_resource type="Script" uid="uid://hvuqxm04vmit" path="res://rock.gd" id="1_68h2w"]
+[ext_resource type="Texture2D" uid="uid://ce3tcyojf2p26" path="res://Pictures/rock_clean.png" id="1_o0qsl"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8u6ia"]
+radius = 88.358215
+height = 176.71643
+
+[node name="Rock" type="AnimatableBody2D" unique_id=687948532 groups=["Rock"]]
+position = Vector2(0, 78.99999)
+scale = Vector2(0.3873015, 0.83750015)
+script = ExtResource("1_68h2w")
+speed = 6
+
+[node name="RockClean" type="Sprite2D" parent="." unique_id=1517121151]
+position = Vector2(-23.237913, 20.298502)
+scale = Vector2(0.8032788, 0.99999994)
+texture = ExtResource("1_o0qsl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=56371809]
+position = Vector2(-20.655743, 21.49253)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("CapsuleShape2D_8u6ia")
