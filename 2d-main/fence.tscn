@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://baguvk4m06dnh"]
+
+[ext_resource type="Texture2D" uid="uid://c8krun1pqrnow" path="res://Pictures/fence.png" id="1_hsy3x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5gl7b"]
+radius = 212.53723
+height = 460.8954
+
+[node name="Node2D" type="Node2D"]
+
+[node name="fence" type="AnimatableBody2D" parent="."]
+position = Vector2(432.0001, 511)
+scale = Vector2(0.3873015, 0.83750015)
+
+[node name="fence" type="Sprite2D" parent="fence"]
+position = Vector2(402.78683, -13.134308)
+scale = Vector2(0.59682375, 0.41947773)
+texture = ExtResource("1_hsy3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fence"]
+position = Vector2(389.8769, -17.910444)
+shape = SubResource("CapsuleShape2D_5gl7b")
