@@ -13,7 +13,7 @@ bg_color = Color(0.18039216, 0.18039216, 0.18039216, 0.39215687)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
 bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
 
-[node name="Control" type="Control" unique_id=400892303]
+[node name="Control2" type="Control" unique_id=400892303]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -35,8 +35,8 @@ size_flags_vertical = 0
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=9654638]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "<Ramming>
-     <Ram>"
+text = "<Running>
+    <Ram>"
 label_settings = SubResource("LabelSettings_ouk20")
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=809864410]
