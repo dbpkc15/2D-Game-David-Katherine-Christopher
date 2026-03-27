@@ -34,15 +34,18 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+func back_to_menu():
+	get_tree().change_scene_to_file(\"res://menu.tscn\")
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body)
 	if body.is_in_group(\"Rock\"):
 		print(\"You HIT me\")
+		Audiostream.stop_music()
 		$\"../Game Over\".visible = true
 		$AnimationPlayer.play(\"Death\")
 		await $AnimationPlayer.animation_finished
-		get_tree().change_scene_to_file(\"res://menu.tscn\")
+		call_deferred(\"back_to_menu\")
 "
 
 [sub_resource type="FontVariation" id="FontVariation_vvxqx"]
