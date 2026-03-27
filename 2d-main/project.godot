@@ -21,6 +21,8 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 [autoload]
 
 Global="*uid://i4642qngwyt4"
+Audiostream="*uid://dikmsf0r81h0b"
+Videoplayer="*uid://crqblk1lvjg2l"
 
 [global_group]
 

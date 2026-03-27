@@ -1,6 +1,8 @@
 extends Control
 
 func _ready() -> void:
+	Audiostream.play_music_menu()
+	Videoplayer.play_game_background()
 	$HighScore.text = "High Score: " + str(Global.high_score)
 
 func _on_button_button_down() -> void:

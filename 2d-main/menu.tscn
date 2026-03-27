@@ -8,13 +8,13 @@ font = ExtResource("1_lti8b")
 font_size = 64
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lti8b"]
-bg_color = Color(0.18039216, 0.18039216, 0.18039216, 0.39215687)
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 0.39215687)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
-bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 0.39215687)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
-bg_color = Color(0.25490198, 0.25490198, 0.25490198, 1)
+bg_color = Color(0.25490198, 0.25490198, 0.25490198, 0.39215687)
 
 [sub_resource type="Animation" id="Animation_ouk20"]
 length = 0.001
