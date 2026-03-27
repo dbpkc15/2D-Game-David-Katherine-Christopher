@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://n0ww7dlekgvk"]
 
+[ext_resource type="Script" uid="uid://bw371a8nw32d3" path="res://background.gd" id="1_8u6ia"]
 [ext_resource type="Texture2D" uid="uid://dao08abqxkbj7" path="res://Pictures/87cefa.png" id="1_eq6nc"]
 [ext_resource type="Texture2D" uid="uid://dawb6t54m6t5a" path="res://Pictures/clouds.png" id="2_bpugw"]
 [ext_resource type="Texture2D" uid="uid://dm1vm2hj3etyr" path="res://Pictures/clouds2.png" id="2_gjjrj"]
@@ -18,6 +19,7 @@ height = 205.37305
 distance = 127.0
 
 [node name="Node2D" type="Node2D" unique_id=1780211877]
+script = ExtResource("1_8u6ia")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=2050697671]
 

@@ -18,6 +18,10 @@ config/name="2D-Main"
 run/main_scene="uid://c6ysjd1gk5nk0"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 
+[autoload]
+
+Global="*uid://i4642qngwyt4"
+
 [global_group]
 
 Rock=""

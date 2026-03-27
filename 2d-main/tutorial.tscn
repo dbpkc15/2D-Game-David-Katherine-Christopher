@@ -41,7 +41,8 @@ size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_7n6eb")
 theme_override_font_sizes/font_size = 32
 text = "•Press Space to Jump
-•Hold to Jump Higher"
+•Hold to Jump Higher
+•Use The arrow keys to move"
 
 [node name="Label3" type="Label" parent="VBoxContainer" unique_id=171280026]
 layout_mode = 2
