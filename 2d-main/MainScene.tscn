@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://cgoxcrm6ug2f2" path="res://Edits.tscn" id="9_cdpnt"]
 [ext_resource type="PackedScene" uid="uid://hlgd6804x3ck" path="res://rock.tscn" id="9_yvb8b"]
 [ext_resource type="PackedScene" uid="uid://ddqchfe3ku0cs" path="res://ram.tscn" id="10_8xkvn"]
+[ext_resource type="PackedScene" uid="uid://snhkrugp1wcg" path="res://game_controller.tscn" id="11_p5x2j"]
+[ext_resource type="PackedScene" uid="uid://bswgx2b6lv3e1" path="res://game_over.tscn" id="12_yvb8b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8u6ia"]
 normal = Vector2(0.00448426, -0.9999899)
@@ -114,5 +116,15 @@ rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=902089375]
 shape = SubResource("WorldBoundaryShape2D_8u6ia")
+
+[node name="GameController" parent="." unique_id=1694389644 instance=ExtResource("11_p5x2j")]
+
+[node name="Game Over" parent="." unique_id=510713178 instance=ExtResource("12_yvb8b")]
+visible = false
+self_modulate = Color(1, 0.054901958, 0.043137252, 1)
+offset_left = 575.0
+offset_top = 325.0
+offset_right = 575.0
+offset_bottom = 325.0
 
 [connection signal="timeout" from="ObjectSpawner/SpawnTimer" to="ObjectSpawner" method="_on_spawn_timer_timeout"]

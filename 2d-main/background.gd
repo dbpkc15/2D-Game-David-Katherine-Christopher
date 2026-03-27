@@ -1,14 +1,12 @@
-extends AnimatableBody2D
+extends Node2D
 
-@export var speed = 10
-
+var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	add_to_group("Rocks")
-	speed += $"../../../GameController".speedup
+	print(rng)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	position.x-=speed
+	pass

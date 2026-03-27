@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://hj2wxjm5ak1c" path="res://Pictures/Ram.png" id="1_bnm00"]
 [ext_resource type="Script" uid="uid://brypfrwodq1kf" path="res://ram.gd" id="2_nlyin"]
+[ext_resource type="AudioStream" uid="uid://cky7081i381b0" path="res://audios/make_more_sound-8-bit-video-game-fail-version-2-145478.mp3" id="3_nlyin"]
 
 [sub_resource type="GDScript" id="GDScript_6i7po"]
 script/source = "extends CharacterBody2D
@@ -19,6 +20,9 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed(\"ui_accept\") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	
+	if Input.is_action_just_released(\"ui_accept\") and velocity.y < 0:
+		velocity.y = 0
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -35,7 +39,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body)
 	if body.is_in_group(\"Rock\"):
 		print(\"You HIT me\")
-		get_tree().reload_current_scene()
+		$\"../Game Over\".visible = true
+		$AnimationPlayer.play(\"Death\")
+		await $AnimationPlayer.animation_finished
+		get_tree().change_scene_to_file(\"res://menu.tscn\")
 "
 
 [sub_resource type="FontVariation" id="FontVariation_vvxqx"]
@@ -52,6 +59,57 @@ radius = 281.62076
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bnm00"]
 radius = 227.29312
+
+[sub_resource type="Animation" id="Animation_bnm00"]
+resource_name = "Death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite Ram:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.96666664),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.691174]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_nlyin")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_nlyin"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite Ram:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wljxy"]
+_data = {
+&"Death": SubResource("Animation_bnm00"),
+&"RESET": SubResource("Animation_nlyin")
+}
 
 [node name="Ram" type="CharacterBody2D" unique_id=1668994142]
 scale = Vector2(0.20243351, 0.1947464)
@@ -83,7 +141,16 @@ shape = SubResource("CircleShape2D_vvxqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1032077636]
 position = Vector2(4.9398937, -30.809298)
+rotation = 1.739782
 shape = SubResource("CircleShape2D_bnm00")
+
+[node name="Timer" type="Timer" parent="." unique_id=1972019070]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1704182987]
+libraries/ = SubResource("AnimationLibrary_wljxy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AnimationPlayer" unique_id=248853246]
+volume_db = -15.0
 
 [connection signal="area_entered" from="Sprite Ram/Area2D" to="Sprite Ram" method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Sprite Ram/Area2D" to="." method="_on_area_2d_body_entered"]
