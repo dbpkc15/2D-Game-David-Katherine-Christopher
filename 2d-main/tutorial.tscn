@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://djrelyamn75cw"]
+[gd_scene load_steps=4 format=3 uid="uid://djrelyamn75cw"]
 
 [ext_resource type="FontFile" uid="uid://cfhfafqlcp7fd" path="res://Fonts/Showpop.ttf" id="1_7n6eb"]
 [ext_resource type="Script" uid="uid://c00hpvlp1hs20" path="res://tutorial.gd" id="1_yb1ct"]
@@ -6,7 +6,7 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7n6eb"]
 bg_color = Color(0.18039216, 0.18039216, 0.18039216, 0.39215687)
 
-[node name="Control" type="Control" unique_id=1021360265]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +15,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yb1ct")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=292139007]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -28,14 +28,14 @@ offset_bottom = 162.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="VBoxContainer" unique_id=955239320]
+[node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_7n6eb")
 theme_override_font_sizes/font_size = 64
 text = "Controls:"
 
-[node name="Label2" type="Label" parent="VBoxContainer" unique_id=924056742]
+[node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_7n6eb")
@@ -44,23 +44,23 @@ text = "•Press Space to Jump
 •Hold to Jump Higher
 •Use The arrow keys to move"
 
-[node name="Label3" type="Label" parent="VBoxContainer" unique_id=171280026]
+[node name="Label3" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_7n6eb")
 theme_override_font_sizes/font_size = 64
 text = "Aim:"
 
-[node name="Label4" type="Label" parent="VBoxContainer" unique_id=49587748]
+[node name="Label4" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_fonts/font = ExtResource("1_7n6eb")
 theme_override_font_sizes/font_size = 32
-text = "•Avoid The Rocks and Fences
+text = "•Avoid The Rocks
 •Collect Coins to Increase Your Score
 •Survive As Long As You Can!"
 
-[node name="Button" type="Button" parent="." unique_id=1361604510]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 231.0
 offset_top = 485.0
